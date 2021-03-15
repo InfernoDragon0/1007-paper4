@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int maxBurstTime = 0; //max of all processes
 int quantumTime = 0; //0.8 of maxBurstTime
@@ -23,6 +24,9 @@ struct P4Process {
 
 struct P4Process *head = NULL;
 struct P4Process *tail = NULL;
+
+int arrival();
+int noArrival();
 
 int main() {
     //number of processes
@@ -84,8 +88,7 @@ int main() {
     else {
         noArrival();
     }
-    
-    scanf("%d", &numberOfProcesses);
+
     return 0;
 }
 
